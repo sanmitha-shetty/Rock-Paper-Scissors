@@ -52,17 +52,44 @@ function playRound(playerSelection, computerSelection){
      };
  };
 
+ // 5 Rounds of Game
+function game(){
+
+    // Loop
+    while(playerScore < 5 && computerScore < 5 ){
+
+        // Take User Input and Declare variables for computer and player choice
+        let playerInput = prompt('Will you play Rock , paper or Scissor?');
+        const playerSelection = playerInput.toLowerCase();
+        const computerSelection = getComputerChoice();
+
+        console.log(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(playerScore, computerScore);
+     };
+     winGame();
+ };
+
+ //Result Declaration
+function winGame(){
+
+    if(playerScore>computerScore){
+        console.log('Result: You are the Winner');
+    }
+    else if ( computerScore>playerScore){
+        console.log('Result: The Winner is Computer');
+    }
+    else if (computerScore == playerScore){
+        console.log('Result: This is a major Tie');
+    };
+};
+
+//Play Game
+game();
  
 
-// Declare variables for computer and player choice
-let playerInput = prompt('Will you play Rock , paper or Scissor?');
-const playerSelection = playerInput.toLowerCase();
-const computerSelection = getComputerChoice();
- 
-console.log(playerSelection);
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
-console.log(playerScore, computerScore);
+
+
 
 
 

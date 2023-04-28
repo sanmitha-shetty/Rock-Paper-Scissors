@@ -52,17 +52,21 @@ function playRound(playerSelection, computerSelection){
      };
  };
 
- // Declare variables for computer and player choice
-let playerInput = "Rock";
-const playerSelection = playerInput.toLowerCase();
-let computerSelection = getComputerChoice();
+ 
 
+// Declare variables for computer and player choice
+let playerInput = prompt('Will you play Rock , paper or Scissor?');
+const playerSelection = playerInput.toLowerCase();
+const computerSelection = getComputerChoice();
+ 
 console.log(playerSelection);
 console.log(computerSelection);
-
- //Results
 console.log(playRound(playerSelection, computerSelection));
 console.log(playerScore, computerScore);
+
+
+
+
 
 
 

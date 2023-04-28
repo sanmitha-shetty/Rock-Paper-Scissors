@@ -5,15 +5,19 @@ function getComputerChoice(){
 
     return randomChoices;
 };
-
+// Record the Scores
+let playerScore = 0;
+let computerScore = 0;
 
 // The Game Function
 function playRound(playerSelection, computerSelection){
      if (playerSelection == 'rock'){
         if(computerSelection =='paper'){
+            computerScore += 1;
             return 'You lose! Paper beats Rock';
         }
         else if (computerSelection == 'scissor'){
+            playerScore += 1;
             return 'You Win! Rock beats Scissor';
         }
         else {
@@ -22,10 +26,12 @@ function playRound(playerSelection, computerSelection){
      }
      else if (playerSelection == 'paper'){
         if (computerSelection == 'rock'){
+            playerScore += 1;
             return 'You Win! Paper beats Rock';
         }
         else if (computerSelection == 'scissor'){
-            return 'You Lose! Scissor beats Paper'
+            computerScore += 1;
+            return 'You Lose! Scissor beats Paper';
         }
         else {
             return 'Its a Tie! Paper and Paper';
@@ -33,9 +39,11 @@ function playRound(playerSelection, computerSelection){
      }
      else {
         if (computerSelection == 'rock'){
+            computerScore += 1;
             return 'You Lose! Rock beats Scissor';
         }
         else if (computerSelection == 'paper'){
+            playerScore += 1;
             return 'You Win! Scissor beats Paper';
         }
         else{
@@ -54,6 +62,7 @@ console.log(computerSelection);
 
  //Results
 console.log(playRound(playerSelection, computerSelection));
+console.log(playerScore, computerScore);
 
 
 

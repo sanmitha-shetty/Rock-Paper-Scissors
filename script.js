@@ -1,21 +1,21 @@
-//Generate a random Computer Choice
+//Generate a Random Computer Choice
 function getComputerChoice(){
     let computerChoices = ['rock', 'paper', 'scissor'];
     let randomChoices = computerChoices[Math.floor(Math.random()* computerChoices.length)];
 
     return randomChoices;
 };
-// Record the Scores
+// Initialize the Scores
 let playerScore = 0;
 let computerScore = 0;
 
-//Variables for Each Button
+//Variables for Each Button and the Result Div
 const rockButton = document.getElementById("rock-btn");
 const paperButton = document.getElementById("paper-btn");
 const scissorButton = document.getElementById("scissor-btn");
 const resultDiv =document.getElementById("result");
 
-// The Game Function
+// The Game Function and Conditions
 function playRound(playerSelection, computerSelection){
      if (playerSelection == 'rock'){
         if(computerSelection =='paper'){
@@ -56,63 +56,62 @@ function playRound(playerSelection, computerSelection){
             return 'Its a Tie! Scissor and Scissor';
         };
      };
+ 
  };
 
 //Event Listeners for each button
 rockButton.addEventListener('click', ()=>{
-    const computerSelection = getComputerChoice();
-    const playerSelection = 'rock';
-    playRound(playerSelection, computerSelection);
-    resultDiv.innerText=(playRound(playerSelection, computerSelection));
+const computerSelection = getComputerChoice();
+const playerSelection = 'rock';
+resultDiv.innerText=(playRound(playerSelection, computerSelection));
+console.log(playerScore, computerScore);
+game();
 });
 paperButton.addEventListener('click', ()=>{
-    const computerSelection = getComputerChoice();
-    const playerSelection = 'paper';
-    playRound(playerSelection, computerSelection);
-    resultDiv.innerText=(playRound(playerSelection, computerSelection));
+const computerSelection = getComputerChoice();
+const playerSelection = 'paper';
+resultDiv.innerText=(playRound(playerSelection, computerSelection));
+console.log(playerScore, computerScore);
+game();
 });
 scissorButton.addEventListener('click', ()=>{
-    const computerSelection = getComputerChoice();
-    const playerSelection = 'scissor';
-    playRound(playerSelection, computerSelection);
-    resultDiv.innerText=(playRound(playerSelection, computerSelection));
+const computerSelection = getComputerChoice();
+const playerSelection = 'scissor';
+resultDiv.innerText=(playRound(playerSelection, computerSelection));
+console.log(playerScore, computerScore);
+game();
 });
 
 
-//  // 5 Rounds of Game
-// function game(){
+ // 5 Rounds of Game
+function game(){
+    
+    // Loop
+    if (playerScore>=5|| computerScore>=5){
+        rockButton.setAttribute("disabled",1);
+        paperButton.setAttribute("disabled",1);
+        scissorButton.setAttribute("disabled",1);
+        winGame();
+    };
+    
+ };
 
-//     // Loop
-//     while(playerScore < 5 && computerScore < 5 ){
+ //Final Result Declaration
+function winGame(){
 
-//         // Take User Input and Declare variables for computer and player choice
-//         let playerInput = prompt('Will you play Rock , paper or Scissor?');
-//         const playerSelection = playerInput.toLowerCase();
-//         const computerSelection = getComputerChoice();
+    if(playerScore>computerScore){
+        resultDiv.innerText= ('Result: You are the Winner');
+    }
+    else if ( computerScore>playerScore){
+        resultDiv.innerText=('Result: The Winner is Computer');
+    }
+    else if (computerScore == playerScore){
+        resultDiv.innerText= ('Result: This is a major Tie');
+    };
+};
 
-//         console.log(playerSelection, computerSelection);
-//         console.log(playRound(playerSelection, computerSelection));
-//         console.log(playerScore, computerScore);
-//      };
-//      winGame();
-//  };
 
-//  //Result Declaration
-// function winGame(){
 
-//     if(playerScore>computerScore){
-//         console.log('Result: You are the Winner');
-//     }
-//     else if ( computerScore>playerScore){
-//         console.log('Result: The Winner is Computer');
-//     }
-//     else if (computerScore == playerScore){
-//         console.log('Result: This is a major Tie');
-//     };
-// };
-
-// //Play Game
-// game();
  
 
 

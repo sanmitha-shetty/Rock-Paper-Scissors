@@ -9,6 +9,11 @@ function getComputerChoice(){
 let playerScore = 0;
 let computerScore = 0;
 
+//Variables for Each Button
+const rockButton = document.getElementById("rock-btn");
+const paperButton = document.getElementById("paper-btn");
+const scissorButton = document.getElementById("scissor-btn");
+
 // The Game Function
 function playRound(playerSelection, computerSelection){
      if (playerSelection == 'rock'){
@@ -52,40 +57,61 @@ function playRound(playerSelection, computerSelection){
      };
  };
 
- // 5 Rounds of Game
-function game(){
+//Event Listeners for each button
+rockButton.addEventListener('click', ()=>{
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'rock';
+    playRound(playerSelection, computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+});
+paperButton.addEventListener('click', ()=>{
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'paper';
+    playRound(playerSelection, computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+});
+scissorButton.addEventListener('click', ()=>{
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'scissor';
+    playRound(playerSelection, computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+});
 
-    // Loop
-    while(playerScore < 5 && computerScore < 5 ){
 
-        // Take User Input and Declare variables for computer and player choice
-        let playerInput = prompt('Will you play Rock , paper or Scissor?');
-        const playerSelection = playerInput.toLowerCase();
-        const computerSelection = getComputerChoice();
+//  // 5 Rounds of Game
+// function game(){
 
-        console.log(playerSelection, computerSelection);
-        console.log(playRound(playerSelection, computerSelection));
-        console.log(playerScore, computerScore);
-     };
-     winGame();
- };
+//     // Loop
+//     while(playerScore < 5 && computerScore < 5 ){
 
- //Result Declaration
-function winGame(){
+//         // Take User Input and Declare variables for computer and player choice
+//         let playerInput = prompt('Will you play Rock , paper or Scissor?');
+//         const playerSelection = playerInput.toLowerCase();
+//         const computerSelection = getComputerChoice();
 
-    if(playerScore>computerScore){
-        console.log('Result: You are the Winner');
-    }
-    else if ( computerScore>playerScore){
-        console.log('Result: The Winner is Computer');
-    }
-    else if (computerScore == playerScore){
-        console.log('Result: This is a major Tie');
-    };
-};
+//         console.log(playerSelection, computerSelection);
+//         console.log(playRound(playerSelection, computerSelection));
+//         console.log(playerScore, computerScore);
+//      };
+//      winGame();
+//  };
 
-//Play Game
-game();
+//  //Result Declaration
+// function winGame(){
+
+//     if(playerScore>computerScore){
+//         console.log('Result: You are the Winner');
+//     }
+//     else if ( computerScore>playerScore){
+//         console.log('Result: The Winner is Computer');
+//     }
+//     else if (computerScore == playerScore){
+//         console.log('Result: This is a major Tie');
+//     };
+// };
+
+// //Play Game
+// game();
  
 
 

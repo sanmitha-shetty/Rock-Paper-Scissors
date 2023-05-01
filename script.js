@@ -13,6 +13,7 @@ let computerScore = 0;
 const rockButton = document.getElementById("rock-btn");
 const paperButton = document.getElementById("paper-btn");
 const scissorButton = document.getElementById("scissor-btn");
+const resultDiv =document.getElementById("result");
 
 // The Game Function
 function playRound(playerSelection, computerSelection){
@@ -62,19 +63,19 @@ rockButton.addEventListener('click', ()=>{
     const computerSelection = getComputerChoice();
     const playerSelection = 'rock';
     playRound(playerSelection, computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
+    resultDiv.innerText=(playRound(playerSelection, computerSelection));
 });
 paperButton.addEventListener('click', ()=>{
     const computerSelection = getComputerChoice();
     const playerSelection = 'paper';
     playRound(playerSelection, computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
+    resultDiv.innerText=(playRound(playerSelection, computerSelection));
 });
 scissorButton.addEventListener('click', ()=>{
     const computerSelection = getComputerChoice();
     const playerSelection = 'scissor';
     playRound(playerSelection, computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
+    resultDiv.innerText=(playRound(playerSelection, computerSelection));
 });
 
 

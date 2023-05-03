@@ -5,20 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock. Paper. Scissors.</title>
+    <link rel = "stylesheet" href= "style.css">
 </head>
 <body>
     <div class="question">
-        <p>
-            Do You want to play: Rock, Paper, Scissors?
+        <p class="play">
+            Do you want to play: Rock, Paper, Scissors?
         </p>
-        <p>
-            Click on you choice to start the game
+        <p class= "choice">
+            Click on your choice to start the game:
         </p>
     </div>  
-    <div class = "container">
-        <button class = "btn" id = "rock-btn">Rock</button>
-        <button class = "btn" id = "paper-btn">Paper</button>
-        <button class = "btn" id = "scissor-btn">Scissor</button>
+    <div class = "btn-container">
+        <div class="btn-class">
+            <img src="./assets/rock.png">
+            <button class = "btn" id = "rock-btn">Rock</button>
+        </div>
+        <div class="btn-class">
+            <img src = "assets/paper.png" >
+            <button class = "btn" id = "paper-btn">Paper</button>
+        </div>
+        <div class="btn-class">
+            <img src="./assets/scissor.png">
+            <button class = "btn" id = "scissor-btn">Scissor</button>
+        </div>
     </div>
     <div class="container" id = "result">
 

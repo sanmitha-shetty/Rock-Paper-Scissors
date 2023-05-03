@@ -1,0 +1,63 @@
+body{
+    background-color: black;
+    color: bisque;
+}
+.play{
+    width:100%;
+    height: auto;
+    margin: 50px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: Helvetica;
+};
+p .choice{
+    width:100%;
+    height: auto;
+    margin: 50px;
+    text-align: center;
+    justify-content: center;
+    
+}
+.choice{
+    text-align: center;
+    font-size: 25px;
+    font-family: Helvetica;
+    font-weight: 500;
+}
+div{
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+.btn-container{
+    display: flex;
+    margin: auto;
+    padding: auto;
+    flex-direction: row;
+    justify-content:center;
+}
+.btn-class{
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    margin: auto;
+    padding: 20px;
+    width: 200px;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Helvetica;
+    color: beige;
+    background-color: black;
+    border: solid 3px beige;
+    border-radius: 10px;
+}
+
+img{
+    max-width: 250px;
+}
+
+
+
+

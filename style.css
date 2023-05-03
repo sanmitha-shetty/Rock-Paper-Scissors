@@ -103,7 +103,7 @@ img{
     display: flex;
     width: 50%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 20px;
     justify-content: center;
 }
 #reset-btn{

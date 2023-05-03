@@ -7,7 +7,7 @@ body{
 .play{
     width:100%;
     height: auto;
-    margin: 50px;
+    margin: 25px;
     text-align: center;
     font-size: 40px;
     font-weight: 900;
@@ -16,14 +16,14 @@ body{
 p .choice{
     width:100%;
     height: auto;
-    margin: 10px;
     text-align: center;
     justify-content: center;
     
 }
 .choice{
+    margin: 20px;
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
     font-family: Helvetica;
     font-weight: 500;
     font-style: italic;
@@ -35,9 +35,9 @@ p .choice{
     flex-direction: row;
     justify-content: space-around;
     font-family: Helvetica;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
-    border: solid beige 3px;
+    border: solid beige 2px;
 };
 
 
@@ -49,8 +49,8 @@ div{
 .btn-container{
     display: flex;
     margin: auto;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 250px;
+    margin-right: 250px;
     padding: auto;
     flex-direction: row;
     justify-content:space-around;
@@ -61,10 +61,10 @@ div{
 }
 .btn{
     margin: auto;
-    margin-top: 20px;
-    padding: 20px;
-    width: 200px;
-    font-size: 30px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 150px;
+    font-size: 20px;
     font-weight: 600;
     font-family: Helvetica;
     color: beige;
@@ -85,7 +85,7 @@ img{
     font-weight: 600;
     text-align: center;
     font-family: Helvetica;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -106,11 +106,11 @@ img{
     display: flex;
     width: 50%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 15px;
     justify-content: center;
 }
 #reset-btn{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
     margin: auto;
     padding: 15px;

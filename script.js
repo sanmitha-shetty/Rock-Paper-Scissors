@@ -71,6 +71,7 @@ game();
 playerDiv.innerText= "Your Score: " +playerScore;
 compDiv.innerText= "Computer Score: " +computerScore; 
 });
+
 paperButton.addEventListener('click', ()=>{
 const computerSelection = getComputerChoice();
 const playerSelection = 'paper';
@@ -79,6 +80,7 @@ game();
 playerDiv.innerText= "Your Score: " +playerScore;
 compDiv.innerText= "Computer Score: " +computerScore; 
 });
+
 scissorButton.addEventListener('click', ()=>{
 const computerSelection = getComputerChoice();
 const playerSelection = 'scissor';
@@ -87,7 +89,6 @@ game();
 playerDiv.innerText= "Your Score: " +playerScore;
 compDiv.innerText= "Computer Score: " +computerScore; 
 });
-
 
  // 5 Rounds of Game
 function game(){
@@ -115,13 +116,7 @@ function winGame(){
         resultDiv.innerText= ('Result: This is a major Tie');
     };
 };
- function restartGame(){
-    computerScore == 0;
-    playerScore == 0;
-    rockButton.setAttribute("enabled",0);
-    paperButton.setAttribute("disabled",0);
-    scissorButton.setAttribute("disabled",0);
- }
+
 
 
  

@@ -1,6 +1,7 @@
 body{
     background-color: black;
     color: bisque;
+    overflow: auto;
 }
 .play{
     width:100%;
@@ -78,7 +79,7 @@ img{
     height: max-content;
     color: black;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     font-family: Helvetica;
     margin-top: 50px;
@@ -96,14 +97,27 @@ img{
     color: black;
     border: solid 3px silver;
     transform: scale(1.2);
-};
-.btn:disabled{
-    background-color: gray;
+}
+
+.reset-class{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: center;
+}
+#reset-btn{
+    font-size: 20px;
+    font-weight: 300;
+    margin: auto;
+    padding: 15px;
+    background-color:darksalmon;
     color: black;
-    border: solid 3px red;
-    transform: scale(0.5);
-};
-
-
-
-
+    border: solid 5px;
+    border-radius: 25px;
+}
+#reset-btn:hover{
+    background-color: black;
+    color: beige;
+    border: solid 2px beige ;
+}

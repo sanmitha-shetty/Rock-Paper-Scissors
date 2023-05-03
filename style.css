@@ -2,6 +2,7 @@ body{
     background-color: black;
     color: bisque;
     overflow: hidden;
+    height: 95vh;
 }
 .play{
     width:100%;
@@ -48,9 +49,11 @@ div{
 .btn-container{
     display: flex;
     margin: auto;
+    margin-left: 200px;
+    margin-right: 200px;
     padding: auto;
     flex-direction: row;
-    justify-content:center;
+    justify-content:space-around;
 }
 .btn-class{
     display: flex;
@@ -71,7 +74,7 @@ div{
 }
 
 img{
-    max-width: 250px;
+    max-width: 200px;
 }
 .container{
     display: block;

@@ -14,9 +14,12 @@ const rockButton = document.getElementById("rock-btn");
 const paperButton = document.getElementById("paper-btn");
 const scissorButton = document.getElementById("scissor-btn");
 const resultDiv =document.getElementById("result");
+const playerDiv = document.getElementById("playerScore");
+const compDiv = document.getElementById("compScore");
 
 // The Game Function and Conditions
 function playRound(playerSelection, computerSelection){
+
      if (playerSelection == 'rock'){
         if(computerSelection =='paper'){
             computerScore += 1;
@@ -64,28 +67,31 @@ rockButton.addEventListener('click', ()=>{
 const computerSelection = getComputerChoice();
 const playerSelection = 'rock';
 resultDiv.innerText=(playRound(playerSelection, computerSelection));
-console.log(playerScore, computerScore);
 game();
+playerDiv.innerText= "Your Score: " +playerScore;
+compDiv.innerText= "Computer Score: " +computerScore; 
 });
 paperButton.addEventListener('click', ()=>{
 const computerSelection = getComputerChoice();
 const playerSelection = 'paper';
 resultDiv.innerText=(playRound(playerSelection, computerSelection));
-console.log(playerScore, computerScore);
 game();
+playerDiv.innerText= "Your Score: " +playerScore;
+compDiv.innerText= "Computer Score: " +computerScore; 
 });
 scissorButton.addEventListener('click', ()=>{
 const computerSelection = getComputerChoice();
 const playerSelection = 'scissor';
 resultDiv.innerText=(playRound(playerSelection, computerSelection));
-console.log(playerScore, computerScore);
 game();
+playerDiv.innerText= "Your Score: " +playerScore;
+compDiv.innerText= "Computer Score: " +computerScore; 
 });
 
 
  // 5 Rounds of Game
 function game(){
-    
+  
     // Loop
     if (playerScore>=5|| computerScore>=5){
         rockButton.setAttribute("disabled",1);
@@ -109,7 +115,13 @@ function winGame(){
         resultDiv.innerText= ('Result: This is a major Tie');
     };
 };
-
+ function restartGame(){
+    computerScore == 0;
+    playerScore == 0;
+    rockButton.setAttribute("enabled",0);
+    paperButton.setAttribute("disabled",0);
+    scissorButton.setAttribute("disabled",0);
+ }
 
 
  
